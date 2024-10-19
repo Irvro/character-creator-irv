@@ -1,5 +1,5 @@
 .characterEditor {
-  padding-top: 128px;
+  padding-top: 32px;
   padding-bottom: 64px;
 }
 
@@ -7,7 +7,8 @@
 }
 
 .header {
-  padding-bottom: 64px;
+  padding-bottom: 32px;
+  width: auto;
 }
 
 .title {
@@ -27,4 +28,46 @@
 }
 
 .controlColumn {
+  display: flex;
+  position: absolute;
+  bottom: -4px;
+  left:5px;
+  gap: 2rem;
+  width: 100vw;
+  isolation: isolate;
+  overflow-x: scroll;
+  padding-inline-end: 5px;
 }
+
+
+@media (min-width:641px) {
+  .controlColumn {
+    flex-direction: column;
+    position:static;
+    gap: 2rem;
+    width: 50%;
+    isolation: isolate;
+    overflow-x: visible;
+  }
+
+  .darkbg {
+    background: hsl(195, 25%, 86%);
+    height: 300px;
+    width: 100vw;
+    position: fixed;
+    bottom:0;
+  }
+
+  .characterEditor {
+    padding-top: 128px;
+  }
+  
+  .header {
+    padding-bottom: 64px;
+    width: 65%;
+  }
+  
+}
+
+
+
